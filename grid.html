@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header header header"
+        "advertise-left main-content sidebar advertise-right"
+        "advertise-left twin1 twin2 advertise-right"
+        "footer footer footer footer";
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      grid-template-rows: auto 200px 200px auto;
+      gap: 10px;
+      padding: 10px;
+      height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background: #42a5f5;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: initial;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: #0d47a1;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: initial;
+    }
+
+    .advertise.left {
+      grid-area: advertise-left;
+      background: linear-gradient(to bottom, #fdd835, #fbc02d);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .advertise.right {
+      grid-area: advertise-right;
+      background: linear-gradient(to bottom, #fdd835, #fbc02d);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-content {
+      grid-area: main-content;
+      background: #66bb6a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background: #ab47bc;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .twin {
+      background: #ffa726;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .twin:nth-of-type(6) {
+      grid-area: twin1;
+    }
+
+    .twin:nth-of-type(7) {
+      grid-area: twin2;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="header">.header</div>
+    <div class="advertise left">.advertise</div>
+    <div class="main-content">.main-content</div>
+    <div class="sidebar">.sidebar</div>
+    <div class="advertise right">.advertise</div>
+    <div class="twin">.twin</div>
+    <div class="twin">.twin</div>
+    <div class="footer">.footer</div>
+  </div>
+</body>
+</html>
