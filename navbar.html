@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navbar Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+
+      background: linear-gradient(to bottom, #cce6f5, #f9f9f9);
+      height: 100vh;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 15px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+    }
+
+    .logo span {
+      color: green;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #555;
+      font-size: 18px;
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #007BFF;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      top: 30px;
+      left: 0;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Swapnil <span>Saha</span></div>
+    <div class="nav-links">
+      <a href="#" class="active">About Me</a>
+      <a href="#">Education</a>
+      <div class="dropdown">
+        <a href="#">Achievement ▾</a>
+        <div class="dropdown-content">
+          <a href="#">Educational Achievements</a>
+          <a href="#">Co-Curricular Achievements</a>
+          <a href="#">Sports Achievements</a>
+          <a href="#">Recharse Achievements</a>
+        </div>
+      </div>
+      <a href="#">Project</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+</body>
+</html>
